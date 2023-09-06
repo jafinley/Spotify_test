@@ -90,4 +90,6 @@ const response = fetch('https://accounts.spotify.com/api/token', {
   
     const data = await response.json();
 }
-  
+var test = "true";
+var contentHolder = document.getElementById('auth');
+contentHolder.innerHTML = test;  
