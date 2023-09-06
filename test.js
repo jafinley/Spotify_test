@@ -92,4 +92,4 @@ const response = fetch('https://accounts.spotify.com/api/token', {
 }
 
 var contentHolder = document.getElementById('auth');
-contentHolder.innerHTML = data;  
+contentHolder.innerHTML = clientId;  
