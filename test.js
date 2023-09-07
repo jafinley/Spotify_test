@@ -10,4 +10,4 @@ function generateRandomString(length) {
 codeVerifier = generateRandomString(128);
 
 var contentHolder = document.getElementById('auth');
-contentHolder.innerHTML = codeVerifier;  
+contentHolder.innerHTML = "test";  
