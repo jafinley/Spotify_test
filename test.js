@@ -11,3 +11,4 @@ codeVerifier = generateRandomString(128);
 
 var contentHolder = document.getElementById('auth');
 contentHolder.innerHTML = "test";  
+console.log("This is a test");
