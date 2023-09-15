@@ -28,7 +28,7 @@ async function generateCodeChallenge(codeVerifier) {
 }
 
 const clientId = 'e1b29c8020f24572a1d44274d477e585';
-const redirectUri = 'http://localhost';
+const redirectUri = 'http://localhost:8080';
 
 generateCodeChallenge(codeVerifier).then(codeChallenge => {
   let state = generateRandomString(16);
