@@ -12,8 +12,6 @@ codeVerifier = generateRandomString(128);
 var contentHolder = document.getElementById('auth');
 contentHolder.innerHTML = codeVerifier; 
 
-const digest = await window.crypto.subtle.digest('SHA-256', data);
-console.log(digest);
 async function generateCodeChallenge(codeVerifier) {
     function base64encode(string) {
       return btoa(String.fromCharCode.apply(null, new Uint8Array(string)))
@@ -47,6 +45,8 @@ generateCodeChallenge(codeVerifier).then(codeChallenge => {
     code_challenge_method: 'S256',
     code_challenge: codeChallenge
   });
-
   window.location = 'https://accounts.spotify.com/authorize?' + args;
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+let code = urlParams.get('code');
