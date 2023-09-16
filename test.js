@@ -7,7 +7,7 @@ function generateRandomString(length) {
     }
     return text;
 }
-codeVerifier = generateRandomString(128);
+let codeVerifier = generateRandomString(128);
 
 var contentHolder = document.getElementById('auth');
 contentHolder.innerHTML = codeVerifier; 
